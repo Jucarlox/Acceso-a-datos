@@ -21,16 +21,16 @@ public class Monumento {
     private String Localizacion;
     private String NombreMonumento;
     private @Lob /*@Lob hace que el striing sea mas grande*/ String Descripcion;
-    private String URL;
+    private String url;
 
-    public Monumento(String codigoPais, String nombrePais, String nombreCiudad, String localizacion, String nombreMonumento, String descripcion, String URL) {
+    public Monumento(String codigoPais, String nombrePais, String nombreCiudad, String localizacion, String nombreMonumento, String descripcion, String url) {
         CodigoPais = codigoPais;
         NombrePais = nombrePais;
         NombreCiudad = nombreCiudad;
         Localizacion = localizacion;
         NombreMonumento = nombreMonumento;
         Descripcion = descripcion;
-        this.URL = URL;
+        this.url = url;
     }
 
 

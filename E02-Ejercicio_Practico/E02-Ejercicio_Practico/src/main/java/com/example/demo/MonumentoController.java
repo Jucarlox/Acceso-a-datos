@@ -18,7 +18,7 @@ public class MonumentoController {
 
     @GetMapping({"/{id}"})
     public Monumento findOne(@PathVariable("id") Long id) {
-        return (Monumento)this.repository.findById(id).orElse((Monumento)null);
+        return (Monumento)this.repository.findById(id).orElse(null);
     }
 
     @PostMapping({"/"})
@@ -31,13 +31,26 @@ public class MonumentoController {
 
     @PutMapping({"/{id}"})
     public Monumento edit(@RequestBody Monumento monumento, @PathVariable Long id) {
+        /*
+        return ResponseEntity.of(
+        repository.findById(id).map(m -> {
+            m.setCodigoPais(monumento.getCodigoPais());
+            m.setNombrePais(monumento.getNombrePais());
+            m.setNombreCiudad(monumento.getNombreCiudad());
+
+        });
+        repository.save(monumento);
+            return monumento;);
+        */
+
+
         Monumento antigua = (Monumento)this.repository.findById(id).orElse(monumento);
         antigua.setNombrePais(monumento.getNombrePais());
         antigua.setCodigoPais(monumento.getCodigoPais());
         antigua.setNombreCiudad(monumento.getNombreCiudad());
         antigua.setDescripcion(monumento.getDescripcion());
         antigua.setLocalizacion(monumento.getLocalizacion());
-        antigua.setURL(monumento.getURL());
+        antigua.setUrl(monumento.getUrl());
         antigua.setNombreMonumento(monumento.getNombreMonumento());
         return (Monumento)this.repository.save(antigua);
     }
