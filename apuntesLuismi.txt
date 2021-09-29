@@ -44,7 +44,11 @@ Hace muchas cosas en el GetMapping del cotrolador .stream, .map , etc...
 
 Añade el return 
 
+Builder sirve como atajo a la hora de realizar codigo
 
+@GetMapping hace una nueva lista con if, primero busca todos los resultados y sino devuelve un 404
+
+Añade un if a la creacion de Monumento para que los monumentos tengan categoria o sino que den error.
 
 
 
