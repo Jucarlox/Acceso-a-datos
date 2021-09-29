@@ -1,0 +1,52 @@
+Clase Categoria
+
+
+Va a ser una entidad, con unos atributos,
+
+
+Asocia Many-to-One con monumento.
+
+En monumento añade una propidad @ManyToOne(CATEGORIA)
+
+Crea un paquete para los controladores
+
+Mete el controller del otro dia
+
+Crea un controller para las categorias
+
+Copia y pega los controladores de los monumentos y los cambia para las categorias
+
+Entra en el PostMan y Crea una nueva carpeta de consultas llamada categorias
+
+Añade Post nueva categoria
+
+Empieza a explicar las dto porque al añadir un nuevo monumento te pide categoria
+
+Crea nuevo clase CreateMonumetoDto
+
+Le da los atributos de la Clase Monumento + categoriaId
+
+Vamos al controlador de Monumento
+
+Cambia Monumento por CreateMonumentoDto
+
+Ahora no podemos devolver datos y tenemos que cambiar cosas
+
+Crea una nueva clase MonumentoDtoConverter que servira para recoger un CreateMonumentoDto y muchas cosas mas
+
+Crea un bean y en el return devuelve un Monumento
+
+Realiza cambios en el controlador de Monumento
+
+Crea GetMonumentoDto para pedir cosas concretas de monumento, añade la anotacion @Builder para usar .builder en controlador
+
+Hace muchas cosas en el GetMapping del cotrolador .stream, .map , etc...
+
+Añade el return 
+
+
+
+
+
+
+
